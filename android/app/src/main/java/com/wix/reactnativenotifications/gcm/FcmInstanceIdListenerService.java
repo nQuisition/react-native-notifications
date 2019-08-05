@@ -23,7 +23,7 @@ public class FcmInstanceIdListenerService extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage message){
         Bundle bundle = message.toIntent().getExtras();
         Log.d(LOGTAG, "New message from GCM: " + bundle);
-
+        Log.d(LOGTAG, "AAAAAAAAAAAA");
         try {
             final IPushNotification notification = PushNotification.get(getApplicationContext(), bundle);
             notification.onReceived();
